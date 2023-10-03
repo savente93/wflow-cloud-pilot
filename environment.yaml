@@ -1,0 +1,10 @@
+name: hydromtcp
+
+channels:
+  - conda-forge
+
+# notes R packages stats and utils were not found
+dependencies:
+  - hydromt
+  - hydromt-wflow
+  
