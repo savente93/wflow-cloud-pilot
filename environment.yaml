@@ -6,5 +6,5 @@ channels:
 # notes R packages stats and utils were not found
 dependencies:
   - hydromt
-  - hydromt-wflow
+  - hydromt_wflow
   
