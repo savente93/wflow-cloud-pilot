@@ -19,4 +19,4 @@ else
     region='{"basin": [4.099565785808807, 51.97582874463458], "strord": 5}'
 fi
 
-hydromt build wflow -vv "./wflow_$size" -i wflow-build.ini -r "$region" -d deltares-data-linux.yaml
+hydromt build wflow -vv "./wflow_$size" -i wflow-build.ini -r "$region" -d deltares-data-curated.yaml
