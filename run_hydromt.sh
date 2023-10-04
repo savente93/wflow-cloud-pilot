@@ -1,8 +1,10 @@
-#! /usr/bin/bash
+#!/usr/bin/bash
 
 set -e
 
 size=$1
+data_catalog=$2
+
 if [ -z "$size" ]
 then
       size=small
@@ -19,4 +21,9 @@ else
     region='{"basin": [4.099565785808807, 51.97582874463458], "strord": 5}'
 fi
 
-hydromt build wflow -vv "./wflow_$size" -i wflow-build.ini -r "$region" -d deltares-data-linux.yaml
+if [ -z "$data_catalog" ]
+then
+    data_catalog=deltares-data-curated
+fi
+
+hydromt build wflow -vv "./wflow_$size" -i wflow-build.ini -r "$region" -d deltares-data-curated.yaml 2>&1 > /dev/null
