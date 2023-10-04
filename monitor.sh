@@ -5,7 +5,7 @@ rm -rf $LOG_DIR
 mkdir $LOG_DIR
 SAMPLE_RATE_S=1
 
-./while_true.sh &
+./run_hydromt.sh &
 PID=$!
 
 echo "attaching to PID: " $PID
